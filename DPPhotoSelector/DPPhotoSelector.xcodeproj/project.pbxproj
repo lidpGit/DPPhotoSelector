@@ -13,6 +13,9 @@
 		372048B91B96973700C06C3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372048B81B96973700C06C3B /* Images.xcassets */; };
 		372048BC1B96973700C06C3B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372048BA1B96973700C06C3B /* LaunchScreen.xib */; };
 		372048C81B96973700C06C3B /* DPPhotoSelectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 372048C71B96973700C06C3B /* DPPhotoSelectorTests.m */; };
+		372048D81B96989800C06C3B /* DPPhotoGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372048D31B96989800C06C3B /* DPPhotoGroupViewController.m */; };
+		372048D91B96989800C06C3B /* DPPhotoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372048D51B96989800C06C3B /* DPPhotoListViewController.m */; };
+		372048DA1B96989800C06C3B /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 372048D71B96989800C06C3B /* UINavigationController+FDFullscreenPopGesture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,13 @@
 		372048C11B96973700C06C3B /* DPPhotoSelectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DPPhotoSelectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		372048C61B96973700C06C3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		372048C71B96973700C06C3B /* DPPhotoSelectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPPhotoSelectorTests.m; sourceTree = "<group>"; };
+		372048D11B96987300C06C3B /* DPPhotoSelector-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DPPhotoSelector-Prefix.pch"; sourceTree = "<group>"; };
+		372048D21B96989800C06C3B /* DPPhotoGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPhotoGroupViewController.h; sourceTree = "<group>"; };
+		372048D31B96989800C06C3B /* DPPhotoGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPhotoGroupViewController.m; sourceTree = "<group>"; };
+		372048D41B96989800C06C3B /* DPPhotoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPhotoListViewController.h; sourceTree = "<group>"; };
+		372048D51B96989800C06C3B /* DPPhotoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPhotoListViewController.m; sourceTree = "<group>"; };
+		372048D61B96989800C06C3B /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		372048D71B96989800C06C3B /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,12 @@
 				372048B01B96973700C06C3B /* AppDelegate.m */,
 				372048B21B96973700C06C3B /* ViewController.h */,
 				372048B31B96973700C06C3B /* ViewController.m */,
+				372048D21B96989800C06C3B /* DPPhotoGroupViewController.h */,
+				372048D31B96989800C06C3B /* DPPhotoGroupViewController.m */,
+				372048D41B96989800C06C3B /* DPPhotoListViewController.h */,
+				372048D51B96989800C06C3B /* DPPhotoListViewController.m */,
+				372048D61B96989800C06C3B /* UINavigationController+FDFullscreenPopGesture.h */,
+				372048D71B96989800C06C3B /* UINavigationController+FDFullscreenPopGesture.m */,
 				372048B81B96973700C06C3B /* Images.xcassets */,
 				372048BA1B96973700C06C3B /* LaunchScreen.xib */,
 				372048AB1B96973700C06C3B /* Supporting Files */,
@@ -95,6 +111,7 @@
 			children = (
 				372048AC1B96973700C06C3B /* Info.plist */,
 				372048AD1B96973700C06C3B /* main.m */,
+				372048D11B96987300C06C3B /* DPPhotoSelector-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -215,7 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				372048DA1B96989800C06C3B /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				372048D91B96989800C06C3B /* DPPhotoListViewController.m in Sources */,
 				372048B41B96973700C06C3B /* ViewController.m in Sources */,
+				372048D81B96989800C06C3B /* DPPhotoGroupViewController.m in Sources */,
 				372048B11B96973700C06C3B /* AppDelegate.m in Sources */,
 				372048AE1B96973700C06C3B /* main.m in Sources */,
 			);
@@ -335,6 +355,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "DPPhotoSelector/DPPhotoSelector-Prefix.pch";
 				INFOPLIST_FILE = DPPhotoSelector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -345,6 +366,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "DPPhotoSelector/DPPhotoSelector-Prefix.pch";
 				INFOPLIST_FILE = DPPhotoSelector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
