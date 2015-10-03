@@ -187,13 +187,6 @@ const NSInteger maxCountInLine = 3; /**< 每行显示图片张数 */
     //bool值取反
     _selectedFalgList[indexPath.row] = [NSNumber numberWithBool:![_selectedFalgList[indexPath.row] boolValue]];
     
-    //如果已选总数大于等于可选总数，并且当前cell为选中状态，return
-    if (_selectedCount >= self.groupVC.maxSelectionCount && [_selectedFalgList[indexPath.row] boolValue]) {
-        NSString *msg = [NSString stringWithFormat:@"最多选择%li张图片",self.groupVC.maxSelectionCount];
-        ALERT_MSG(msg);
-        return;
-    }
-    
     //设置cell选中状态
     DPPhotoListCell *cell = (id)[collectionView cellForItemAtIndexPath:indexPath];
     cell.isChoose = [_selectedFalgList[indexPath.row] boolValue];
@@ -209,6 +202,19 @@ const NSInteger maxCountInLine = 3; /**< 每行显示图片张数 */
             [self.selectedAssets removeObject:asset];
         }
         _selectedCount--;
+    }
+    
+    //如果已选总数大于等于可选总数，并且当前cell为选中状态，return
+    if (_selectedCount > self.groupVC.maxSelectionCount && [_selectedFalgList[indexPath.row] boolValue]) {
+        cell.isChoose = NO;
+        _selectedCount--;
+        if ([self.selectedAssets containsObject:asset]) {
+            [self.selectedAssets removeObject:asset];
+        }
+        _selectedFalgList[indexPath.row] = @(0);
+        NSString *msg = [NSString stringWithFormat:@"最多选择%li张图片",self.groupVC.maxSelectionCount];
+        ALERT_MSG(msg);
+        return;
     }
     
     if (_selectedCount > 0) {
